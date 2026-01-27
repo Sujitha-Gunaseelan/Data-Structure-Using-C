@@ -1,0 +1,31 @@
+#include <stdio.h>
+struct student {
+    int EmpID;
+    int EmID;
+    float salary;
+} s[3];
+
+int main() {
+    int i,n;
+    printf("Enter the number of Employee:");
+    scanf("%d",&n);
+    printf("\n\n------Enter information of Employee------\n\n");
+    for (i = 0; i < n; ++i) {
+        s[i].EmpID = i + 1;
+        printf("Detail of Employee %d,\n", s[i].EmpID);
+        printf("Employee ID:");
+        scanf("%d",&s[i].EmID);
+        printf("8Enter Salary: ");
+        scanf("%f", &s[i].salary);
+    }
+    printf("\n\nDisplaying Information:\n\n");
+
+    
+    for (i = 0; i < n; ++i) {
+        printf("\nEmployee: %d\n", s[i].EmpID);
+        printf("Employee ID: %d", s[i].EmID);
+        printf("Salary: %.1f", s[i].salary);
+        printf("\n");
+    }
+    return 0;
+}

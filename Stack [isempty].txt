@@ -1,0 +1,60 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+#define size 5
+int array[size];
+int top = -1;
+//push
+void push(int value){
+    if(top == size-1){
+        printf("No space left\n");
+    }
+    else
+    {
+        top++;
+        array[top] = value;
+        printf("The value %d pushed to array \n",value);
+    }
+}
+//peek  operation
+void pop(){
+    if(top == -1){
+        printf("no value at stack");
+    }
+    else
+    {
+        printf("The top value is : %d\n", array[top]);
+       
+        top--;
+    }
+}
+void peak(){
+    if(top == -1){
+        printf("no value at stack");
+    }
+    else
+    {
+        printf("The peak value is : %d\n", array[top]);
+       
+    
+    }
+}
+void isempty(){
+    if(top == -1){
+        printf("no value at stack");
+    }
+    else
+    {
+        printf("Stack has items");
+       
+    
+    }
+}
+
+int main() {
+push(10);
+isempty();
+pop();
+isempty();
+
+    return 0;
+}
